@@ -12,15 +12,21 @@ docker run hello-world
 ```
 #### 2. Check Container Status and Explain
 ```bash
+docker ps -a
+
 ```
 #### 3. Start the Stopped Container
 ```bash
+docker start agitated_morse
+
 ```
 #### 4. Remove the Container
 ```bash
+docker rm agitated_morse
 ```
 #### 5. Remove the Image
 ```bash
+docker rmi hello-world
 ```
 ---
 
@@ -31,24 +37,37 @@ Run an Ubuntu container in interactive mode, create a file inside it, and manage
 ### Steps
 #### 1. Run Ubuntu Container in Interactive Mode
 ```bash
+docker pull ubuntu
+docker run -it ubuntu
 ```
 #### 2. Create a File inside the Container
 ```bash
+echo "bainh aboraya" >index.txt
 ```
 #### 3. Stop and Remove the Container
 ```bash
+docker ps -a
+docker stop xenodochial_proskuriakova
+docker rm xenodochial_proskuriakova
 ```
 #### 4. Check File Status
 ```bash
+ls index.txt
+the file don't exist
 ```
 #### 5. What happened to hello-docker file?
 ```bash
+you won't access  you already delete the container 
 ```
 #### 6. Remove All Stopped Containers
 ```bash
+docker container prune
+
 ```
 #### 7. Bonus: Remove All Containers in One Command
 ```bash
+docker rm -f $(docker ps -aq)
+
 ```
 
 ---
